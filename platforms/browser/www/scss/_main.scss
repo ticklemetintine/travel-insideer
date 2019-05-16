@@ -1,0 +1,115 @@
+body {
+    font-family: $font-primary;
+    font-size: 16px;
+    margin: 0;
+
+    * {
+        outline: none;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+}
+
+.ui-mobile .ui-page-active {
+    padding-top: 100px;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+
+    &.date {
+        position: relative;
+
+        label {
+            position: absolute;
+            top: 15px;
+            left: 7px;
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: $font-primary;
+            z-index: 0;
+            font-size: 1em;
+        }
+
+        .input-box {
+            z-index: 1;
+        }
+    }
+}
+
+.input-box {
+    height: 50px;
+    background: transparent;
+    border: solid 1px $color-white;
+    box-shadow: none;
+    width: 100%;
+    padding: 5px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: $font-primary;
+    font-size: 1em;
+
+
+    &::placeholder {
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-size: 1em;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    display: none;
+
+    a {
+        color: $color-white;
+        background: $color-dark-blue;
+        border-radius: 100%;
+        display: flex;
+        min-width: 40px;
+        min-height: 40px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        font-size: 1.5em;
+        padding: 10px;
+    }
+}
+
+.btn {
+    color: $color-white;
+    font-size: 0.875em;
+    display: block;
+    width: 80%;
+    text-align: center;
+    padding: 10px 20px;
+    margin: auto;
+    text-transform: uppercase;
+    text-shadow: none;
+
+    &.btn-green {
+        background: $color-green;
+    }
+
+    &.btn-white {
+        background: $color-white;
+        color: $color-blue;
+    }
+
+    &.btn-blue {
+        background: $color-dark-blue;
+    }
+}
+
+.fa, .fab, .fal, .far, .fas {
+	// font-family: "FontAwesome", sans-serif;
+}
