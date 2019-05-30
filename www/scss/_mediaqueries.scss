@@ -1,54 +1,372 @@
 @media (max-width: $screen-lg) {
+    .experience-container {
+        .splash {
+            .heading {
+                font-size: 3em;
+            }
+        }
 
+        .featured {
+            padding-top: 0;
+        }
+
+        .item {
+            width: 30%;
+
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+
+        .more-experience {
+            .filter {
+                .form-group {
+                    .ui-rangeslider {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        position: relative;
+
+                        &:before {
+                            content: "to";
+                            position: absolute;
+                            width: 100%;
+                            text-align: center;
+                            top: 5px;
+                        }
+
+                        .ui-rangeslider-sliders {
+                            width: 100%;
+                            margin: 20px 10px 0;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                .item-list {
+                    justify-content: space-between;
+
+                    .item {
+                        width: 48%;
+                        margin: 0 0 40px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .become-a-host {
+        .page-content {
+            &.p2 {
+                .writeup {
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+
+            &.p3 {
+                .steps {
+                    .step {
+                        width: 30%;
+
+                        .writeup {
+                            p {
+                                font-size: 0.875em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 @media (max-width: $screen-md) {
+    .contact-container {
+        padding-top: 40px;
 
+        .container {
+            flex-direction: column;
+
+            .contact-form-container,
+            .side {
+                width: 100%;
+                padding: 0;
+            }
+
+            .contact-form-container {
+                padding-bottom: 40px;
+                border-bottom: solid .5px $color-gray;
+            }
+        }
+    }
+
+    .experience-container {
+        .bg-img {
+            width: 125%;
+        }
+
+        .more-experience {
+            flex-direction: column;
+
+            .btn-filter {
+                display: block;
+                background: $color-navy-blue;
+                color: $color-white;
+                font-size: 1.5em;
+                font-weight: 300;
+                text-transform: none;
+            }
+
+            .filter,
+            .content {
+                width: 100%;
+            }
+
+            .filter {
+                background: $color-navy-blue;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transition: height 0.5s ease;
+
+                &.open {
+                    padding: 20px 20px;
+                    overflow: visible;
+                    height: 735px;
+                }
+
+                .form-group {
+                    label {
+                        color: $color-white;
+                        font-weight: 300;
+                    }
+
+                    &.guests .input-box,
+                    &.guests .flex>*,
+                    .input-box,
+                    .ui-btn {
+                        border-color: $color-white;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .ui-popup-screen.in {
+        z-index: 2;
+        background: rgba(0, 0, 0, .8);
+    }
+
+    .ui-popup-container {
+        z-index: 1100;
+        display: inline-block;
+        position: fixed;
+        padding: 0;
+        outline: 0;
+        top: 20% !important;
+        max-width: 500px !important;
+        width: 100%;
+        left: 0 !important;
+        right: 0;
+        margin: auto;
+
+        .ui-selectmenu.ui-popup {
+            border-radius: 0;
+        }
+    }
+
+    .become-a-host {
+        .page-content {
+            &.p2 {
+                margin-top: 0;
+                top: 20%;
+            }
+
+            &.p3 {
+                &.show {
+                    position: static;
+                }
+
+                .steps {
+                    flex-wrap: wrap;
+
+                    .step {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        .writeup {
+                            p {
+                                font-size: 0.875em;
+                            }
+                        }
+
+                        &.step1,
+                        &.step3 {
+                            animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94) both;
+                        }
+
+                        &.step2 {
+                            animation: slide-in-right .5s cubic-bezier(.25, .46, .45, .94) both;
+                        }
+                    }
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
+
 @media (max-width: $screen-sm) {
-	body {
-		font-size: 14px;
-	}
-	header {
-		.logo {
-			max-height: 60px;
-		}
-	}
-	.ui-mobile .ui-page-active {
-		padding-top: 60px;
-	}
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        .logo {
+            max-height: 60px;
+        }
+    }
+
+    .menu-list {
+        font-size: 16px;
+    }
+
+    .ui-mobile .ui-page-active {
+        padding-top: 80px;
+    }
+
+    .home-search {
+        .heading {
+            font-size: 2.5em;
+        }
+    }
+
+    .top-rated,
+    .featured {
+        padding: 40px 0;
+    }
+
+    .recent-stories {
+        padding: 40px 0;
+
+        .item-list {
+            .item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .login-container {
+        padding: 40px 20px;
+
+        .container {
+            width: 100%;
+        }
+
+        .no-account,
+        .member-login,
+        .back {
+            font-size: 0.875em;
+        }
+    }
+
+    .experience-container {
+        .splash {
+            .item-list {
+                display: block;
+
+                .item {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .more-experience {
+            .content {
+                .item-list {
+                    .item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .become-a-host {
+        .page-content {
+            &.p2 {
+                margin: auto;
+            }
+
+            &.p3 {
+                padding: 0;
+
+                .steps {
+                    .step {
+                        .number {
+                            padding: 10px 16px;
+                        }
+                    }
+                }
+            }
+
+            .heading {
+                font-size: 2.5em;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
 }
+
+@media (max-width: $screen-sm) and (orientation:landscape) {
+    .become-a-host .page-content {
+        position: static;
+
+        &.p2 {
+            margin: auto;
+        }
+
+        .next-page {
+            position: static;
+        }
+    }
+}
+
 @media (max-width: $screen-xsm) {
-	body {
-		font-size: 12px;
-	}
-	.form-group {
-		&.date {
-			label {
-				top: 20px;
-			}
-		}
-	}
-	.recent-stories {
-		padding: 40px 0;
-		.item-list {
-			.item {
-				width: 100%;
-				margin-bottom: 20px;
-			}
-		}
-	}
-}
-@media (max-width: $screen-xxsm) {
-	body {
-		font-size: 12px;
-	}
-	.recent-stories {
-		padding: 40px 0;
-		.item-list {
-			.item {
-				width: 100%;
-				margin-bottom: 20px;
-			}
-		}
-	}
+    body {
+        font-size: 12px;
+    }
+
+    .login-container {
+        font-size: 12px;
+        padding: 40px 10px;
+    }
+
+    .become-a-host {
+        .page-content {
+            &.p2 {
+                margin-top: 0;
+            }
+            &.p3 {
+                padding-bottom: 40px;
+
+                .btn {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }

@@ -7,8 +7,8 @@ header {
     position: relative;
     padding: 10px 0;
     background: $color-white;
-	z-index: 1;
-	
+    z-index: 1;
+
     &.sticky {
         position: fixed;
         top: 0;
@@ -64,6 +64,7 @@ header {
         left: -100%;
         transition: left 0.5s ease;
         max-width: 400px;
+        max-height: 100vh;
 
         &.open {
             transition: left 0.5s ease;
@@ -95,13 +96,13 @@ header {
             list-style-type: none;
 
             .menu-item {
-                padding: 0 0 10px 10px;
-                margin-bottom: 10px;
                 border-bottom: 0.5px solid rgba(255, 255, 255, 0.46);
                 font-weight: 300;
 
                 a {
                     color: $color-white;
+                    display: block;
+                    padding: 10px 10px;
                 }
             }
         }

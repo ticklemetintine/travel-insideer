@@ -1,4 +1,76 @@
+#forgot-password {
+	.login-container {
+		.container {
+			padding-top: 20px;
+		}
+	}
+}
+
 .login-container {
     background: $color-navy-blue;
-    padding: 40px;
+    padding: 80px 40px;
+    min-height: 95vh;
+
+    .container {
+        background: $color-white;
+        padding: 40px 20px;
+        width: 80%;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .login-fb {
+        .btn {
+            position: relative;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 1em;
+            width: 100%;
+
+            i {
+                position: absolute;
+                left: 20px;
+                top: 13px;
+            }
+        }
+    }
+
+    .flex {
+        justify-content: space-between;
+        align-items: center;
+
+        .forgot-password {
+            font-size: 0.875em;
+            color: $color-green;
+            text-decoration: underline;
+            font-weight: 300;
+        }
+    }
+
+    .btn-container {
+        margin: 20px auto;
+
+        .btn {
+        	text-transform: none;
+        }
+    }
+
+    .no-account,
+    .member-login,
+    .back {
+        font-weight: 300;
+        margin: 10px 0;
+
+        a {
+            color: $color-green;
+            text-decoration: underline;
+        }
+    }
+
+    .back {
+    	margin-bottom: 40px;
+    	a {
+    		text-decoration: none;
+    	}
+    }
 }
